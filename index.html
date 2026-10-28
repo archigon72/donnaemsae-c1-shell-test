@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>돈냄새연구소 c-1 격리시험 (가상 데이터)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>c-1 격리시험 화면</h1>
+  <p class="note">시험 전용 · 가상 데이터 · 운영본(v1) 아님</p>
+
+  <section id="token-box">
+    <h2>열쇠(토큰) 설정</h2>
+    <p class="small">토큰은 <b>이 기기 브라우저에만</b> 저장되고, api.github.com 으로만 전송됩니다.</p>
+    <label for="token">Fine-grained PAT</label>
+    <input id="token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="github_pat_...">
+    <div class="row">
+      <button id="save">저장</button>
+      <button id="clear" class="ghost">기기에서 삭제</button>
+    </div>
+    <p id="token-state" class="small"></p>
+  </section>
+
+  <section>
+    <h2>비공개 데이터 읽기</h2>
+    <button id="load">가격 불러오기</button>
+    <p id="status" class="small" role="status"></p>
+    <table id="prices" hidden>
+      <thead><tr><th>코드</th><th>이름</th><th>가격</th><th>기준일</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+</main>
+<script src="config.js"></script>
+<script src="data-fetch.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
